@@ -1,0 +1,34 @@
+html(lang="ja")
+	head
+		meta(charset="UTF-8")
+		title WordPress年表
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		script( async=true src="https://www.googletagmanager.com/gtag/js?id=G-Y35VB6CHMS" )
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-Y35VB6CHMS');
+		link( rel="stylesheet" href="./bootstrap.min.css" )
+		link( rel="stylesheet" href="./animate.min.css" )
+		link( rel="stylesheet" href="./style.css" )
+	body
+		h1.text-center WordPress年表
+		#myTimeline.container
+		script( src="./jquery.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous" )
+		script( src="./jquery-albe-timeline.min.js" )
+		script( src="./history.js" )
+		script.
+			$(document).ready(function () {
+				$('#myTimeline').albeTimeline( graphData, {
+					language: 'ja',
+					formatDate: 'yyyy/MM',
+					sortDesc: false
+				} );
+				setTimeout( function() {
+					$('#myTimeline article').each( function( index, item ) {
+						const className = $( item ).find( 'p' ).attr( 'class' );
+						$( item ).addClass( className );
+					} );
+				}, 100 );
+			});
