@@ -10,10 +10,14 @@
 		"copy:jquery": "cp node_modules/jquery/dist/jquery.slim.min.js dist/",
 		"copy:bootstrap": "cp node_modules/bootstrap/dist/css/bootstrap.min.css dist/",
 		"copy:animate": "cp node_modules/animate.css/animate.min.css dist/",
-		"copy": "npm run copy:timeline && npm run copy:jquery && npm run copy:bootstrap && npm run copy:animate"
+		"copy": "npm run copy:timeline && npm run copy:jquery && npm run copy:bootstrap && npm run copy:animate",
+		"build": "npm run json && npm run copy"
 	},
-	"author": "",
+	"author": "fumikito <info@takahashifumiki.com>",
 	"license": "GPL-3.0-or-later",
+	"engines": {
+		"node": ">=18.0.0"
+	},
 	"devDependencies": {
 		"animate.css": "^3.5.2",
 		"bootstrap": "^3.3.7",
