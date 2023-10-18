@@ -172,6 +172,10 @@ article .link::after {
 article.wordpress .panel {
 	background-color: var(--wp-blue);
 }
+article.wordpress .panel-body {
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
 article.wordpress .badge {
 	color: var(--wp-blue) !important;
 }
