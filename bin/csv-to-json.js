@@ -42,11 +42,9 @@ csv()
 				header: item[ 'カテゴリー' ],
 			};
 		} );
-		console.log( data );
 		return fs.writeFile( 'dist/history.js', 'var graphData = ' + JSON.stringify( data, null, 4 ) + ';' );
 	} )
 	.then( () => {
-
 		return fs.writeFile( 'dist/index.html', pug.renderFile( 'index.pug' ) );
 	} )
 	.then( () => console.log( 'HTMLを保存しました。' ) );
