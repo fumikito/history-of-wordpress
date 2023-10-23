@@ -1,3 +1,4 @@
 /dist/*
 !/dist/style.css
+!/dist/github-mark.svg
 /node_modules/
